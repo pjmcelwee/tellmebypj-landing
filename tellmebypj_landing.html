@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell Me By PJ - Share Your Story</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #a8b89a 0%, #e8f0e3 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            background: rgba(245, 240, 230, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d4016;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #2d4016;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2d4016;
+        }
+        
+        select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+            background: #faf9f5;
+            color: #2d4016;
+        }
+        
+        select:focus, textarea:focus {
+            outline: none;
+            border-color: #2d4016;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+            line-height: 1.5;
+        }
+        
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 1.4;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+        
+        .checkbox-container input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            margin-top: 2px;
+            accent-color: #2d4016;
+            flex-shrink: 0;
+        }
+        
+        .form-wrapper {
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .form-wrapper iframe {
+            border-radius: 10px;
+        }
+        
+        .slogan {
+            text-align: center;
+            color: #2d4016;
+            font-style: italic;
+            font-size: 14px;
+            margin: 20px 0 10px 0;
+            letter-spacing: 0.5px;
+        }
+        
+        .submit-btn {
+            background: #2d4016;
+            color: #f5f0e6;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(45, 64, 22, 0.3);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .privacy-note {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #3a5220;
+            line-height: 1.4;
+        }
+        
+        .thank-you {
+            display: none;
+            text-align: center;
+        }
+        
+        .thank-you h2 {
+            color: #2d4016;
+            margin-bottom: 15px;
+        }
+        
+        .thank-you p {
+            color: #2d4016;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">@tellmebypj</div>
+        <div class="subtitle">You found a sticker. This is your space to share what's on your mind - completely anonymous.</div>
+        
+        <div class="form-wrapper">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeAH57QkosFog9UVSRDcX9wonTE94fuv2okI6iexdePU1eqQQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+        
+        <div class="slogan">actively listening; to understand</div>
+        
+        <div class="privacy-note">
+            Your submission is completely anonymous. No personal information is collected or stored. This is a safe space for honest expression.
+        </div>
+    </div>
+
+    <script>
+        // Google Form is now handling all submissions
+        // No additional JavaScript needed for form functionality
+    </script>
+</body>
+</html>
