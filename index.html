@@ -15,28 +15,23 @@
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #a8b89a 0%, #e8f0e3 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 20px;
             color: #333;
         }
         
         .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .header {
             background: rgba(245, 240, 230, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 40px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 30px;
             text-align: center;
-            animation: fadeIn 0.6s ease-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
         
         .logo {
@@ -48,62 +43,71 @@
         
         .subtitle {
             color: #2d4016;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        
+        .feed-section {
+            background: rgba(245, 240, 230, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
             margin-bottom: 30px;
-            font-size: 16px;
-            line-height: 1.4;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
         
-        .form-group {
-            margin-bottom: 25px;
-            text-align: left;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
+        .feed-title {
             color: #2d4016;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
         }
         
-        select, textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e1e5e9;
-            border-radius: 10px;
-            font-size: 16px;
-            font-family: inherit;
-            transition: border-color 0.3s ease;
-            background: #faf9f5;
+        .feed-subtitle {
             color: #2d4016;
-        }
-        
-        select:focus, textarea:focus {
-            outline: none;
-            border-color: #2d4016;
-        }
-        
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-            line-height: 1.5;
-        }
-        
-        .checkbox-container {
-            display: flex;
-            align-items: flex-start;
-            font-weight: normal;
             font-size: 14px;
-            line-height: 1.4;
-            cursor: pointer;
-            margin-bottom: 0;
+            text-align: center;
+            margin-bottom: 25px;
+            opacity: 0.8;
         }
         
-        .checkbox-container input[type="checkbox"] {
-            width: auto;
-            margin-right: 10px;
-            margin-top: 2px;
-            accent-color: #2d4016;
-            flex-shrink: 0;
+        .story-card {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #2d4016;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .story-text {
+            color: #2d4016;
+            line-height: 1.5;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .story-meta {
+            color: #3a5220;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+        
+        .form-section {
+            background: rgba(245, 240, 230, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-title {
+            color: #2d4016;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
         }
         
         .form-wrapper {
@@ -125,78 +129,164 @@
             letter-spacing: 0.5px;
         }
         
-        .submit-btn {
-            background: #2d4016;
-            color: #f5f0e6;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            width: 100%;
-            margin-top: 10px;
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(45, 64, 22, 0.3);
-        }
-        
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-        
         .privacy-note {
             margin-top: 20px;
             font-size: 12px;
             color: #3a5220;
             line-height: 1.4;
-        }
-        
-        .thank-you {
-            display: none;
             text-align: center;
         }
         
-        .thank-you h2 {
-            color: #2d4016;
-            margin-bottom: 15px;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
-        .thank-you p {
+        .load-more {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .load-more-btn {
+            background: none;
+            border: 2px solid #2d4016;
             color: #2d4016;
-            line-height: 1.6;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .load-more-btn:hover {
+            background: #2d4016;
+            color: #f5f0e6;
         }
         
         @media (max-width: 480px) {
             .container {
-                padding: 25px;
-                margin: 10px;
+                padding: 10px;
+            }
+            
+            .header, .feed-section, .form-section {
+                padding: 20px;
+                margin-bottom: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">@tellmebypj</div>
-        <div class="subtitle">You found a sticker. This is your space to share what's on your mind - completely anonymous.</div>
-        
-        <div class="form-wrapper">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeAH57QkosFog9UVSRDcX9wonTE94fuv2okI6iexdePU1eqQQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">@tellmebypj</div>
+            <div class="subtitle">You found a sticker. See what others have shared, then add your voice to the conversation.</div>
         </div>
-        
-        <div class="slogan">actively listening; to understand</div>
-        
-        <div class="privacy-note">
-            Your submission is completely anonymous. No personal information is collected or stored. This is a safe space for honest expression.
+
+        <!-- Community Feed -->
+        <div class="feed-section">
+            <div class="feed-title">Recent Stories</div>
+            <div class="feed-subtitle">Anonymous thoughts from people who found stickers just like you</div>
+            
+            <div id="storyFeed">
+                <!-- Sample stories for demonstration -->
+                <div class="story-card">
+                    <div class="story-text">"I've been feeling really disconnected from my friends lately. Like we're all just going through the motions but no one's really talking about what's actually going on in our lives."</div>
+                    <div class="story-meta">3 hours ago • found at a café</div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-text">"Today I realized I haven't called my parents in two weeks. I keep meaning to but then I get busy or I convince myself they're probably busy too. Missing that connection."</div>
+                    <div class="story-meta">1 day ago • found at a restaurant</div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-text">"Starting to think I chose the wrong career path but I'm too scared to change now. Everyone expects me to have it figured out at 25 but honestly I feel more lost than ever."</div>
+                    <div class="story-meta">2 days ago • found at a bar</div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-text">"Had the best conversation with a stranger on the train today. Reminded me that there are still good people out there who care about connection."</div>
+                    <div class="story-meta">3 days ago • found at a train station</div>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button class="load-more-btn" onclick="loadMoreStories()">Load more stories</button>
+            </div>
+        </div>
+
+        <!-- Your Turn Section -->
+        <div class="form-section">
+            <div class="form-title">Your Turn</div>
+            
+            <div class="form-wrapper">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeAH57QkosFog9UVSRDcX9wonTE94fuv2okI6iexdePU1eqQQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+            
+            <div class="slogan">actively listening; to understand</div>
+            
+            <div class="privacy-note">
+                Your submission is completely anonymous. No personal information is collected or stored. This is a safe space for honest expression.
+            </div>
         </div>
     </div>
 
     <script>
-        // Google Form is now handling all submissions
-        // No additional JavaScript needed for form functionality
+        // Sample additional stories for the "Load more" functionality
+        const additionalStories = [
+            {
+                text: "I love my job but I'm scared to admit that to my friends who all complain about work constantly. Sometimes being content feels like betrayal.",
+                time: "4 days ago",
+                location: "university"
+            },
+            {
+                text: "Been sober for 6 months and it's the best decision I ever made. Wish I could tell people without them making it weird or thinking I had a 'problem'.",
+                time: "5 days ago", 
+                location: "gym"
+            },
+            {
+                text: "My anxiety has been really bad lately but therapy is helping. Just wanted to say to anyone else struggling - it gets better, slowly but it does.",
+                time: "1 week ago",
+                location: "café"
+            },
+            {
+                text: "Moved to a new city 3 months ago and still haven't made real friends. Everyone's nice but surface level. Miss having people who really get me.",
+                time: "1 week ago",
+                location: "mall"
+            }
+        ];
+
+        let storiesLoaded = 0;
+
+        function loadMoreStories() {
+            const feed = document.getElementById('storyFeed');
+            const button = document.querySelector('.load-more-btn');
+            
+            if (storiesLoaded < additionalStories.length) {
+                const story = additionalStories[storiesLoaded];
+                const storyCard = document.createElement('div');
+                storyCard.className = 'story-card';
+                storyCard.innerHTML = `
+                    <div class="story-text">"${story.text}"</div>
+                    <div class="story-meta">${story.time} • found at a ${story.location}</div>
+                `;
+                
+                feed.appendChild(storyCard);
+                storiesLoaded++;
+                
+                if (storiesLoaded >= additionalStories.length) {
+                    button.textContent = 'That\'s all for now';
+                    button.style.opacity = '0.5';
+                    button.disabled = true;
+                }
+            }
+        }
+
+        // Auto-refresh feed periodically (in real implementation, this would fetch from your backend)
+        setInterval(function() {
+            // In real version, this would check for new submissions and add them to the top
+        }, 30000); // Check every 30 seconds
     </script>
 </body>
 </html>
